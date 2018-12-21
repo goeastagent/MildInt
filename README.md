@@ -1,11 +1,11 @@
-# Deep learning-based Logitudinal heterogeneous data Integration Framework for AD-relevant feature extraction (LIFAD)
+# MildInt: Deep learning-based multimodal longitudinal data integration framework
 
 Deep learning-based python package for general purpose data integration framework. 
 
 ## Getting Started
 
 ### Requirements
-LIFAD requires the following packages to be installed independently
+MildInt requires the following packages to be installed independently
 
   * pandas
   * numpy
@@ -41,7 +41,7 @@ m.append_data('m3', IDs_m3, m3, y_m3, seqlen_m3)
 m.append_test_overlapIDs(testIDs)
 m.append_training_overlapIDs(trainIDs)
 ```
-Feeding data to LIFAD. Training samples as well test samples should be fed to LIFAD. And training samples and test samples are seperated by ID. IDs, data (independent variable), y (dependent variable), and seqlen (time lengths of individual sample) should be arranged in order. 
+Feeding data to MildInt. Training samples as well test samples should be fed to MildInt. And training samples and test samples are seperated by ID. IDs, data (independent variable), y (dependent variable), and seqlen (time lengths of individual sample) should be arranged in order. 
 
 ```
 m.build_integrative_network()
@@ -50,13 +50,13 @@ m.training(batch_size)
 m.evalute_accuracy()
 ```
 
-Training and test. LIFAD provides funtions for measuring accuracy, sensitivity, and specificity. 
+Training and test. MildInt provides funtions for measuring accuracy, sensitivity, and specificity. 
 
 The entire example code is given in the file "exmple_code.py"
 
 ## Feature extraction
 
-LIFAD is mainly used for feature extraction from single domain of data source. After training the LIFAD, 
+MildInt can be used for feature extraction from single domain of data source. After training the MildInt, 
 
 ```
 m.single_feature_extraction('m1',m1, seqlen_m1)
@@ -64,36 +64,8 @@ m.single_feature_extraction('m1',m1, seqlen_m1)
 
 This gives fixed-size of feature vector from single modality.
 
-
-## Citing
-If you find LIFAD useful in your research, we ask that you cite the following paper:
-```
-@inproceedings{Perozzi:2014:DOL:2623330.2623732,
- author = {Perozzi, Bryan and Al-Rfou, Rami and Skiena, Steven},
- title = {DeepWalk: Online Learning of Social Representations},
- booktitle = {Proceedings of the 20th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining},
- series = {KDD '14},
- year = {2014},
- isbn = {978-1-4503-2956-9},
- location = {New York, New York, USA},
- pages = {701--710},
- numpages = {10},
- url = {http://doi.acm.org/10.1145/2623330.2623732},
- doi = {10.1145/2623330.2623732},
- acmid = {2623732},
- publisher = {ACM},
- address = {New York, NY, USA}
- keywords = {deep learning, latent representations, learning with partial labels, network classification, online learning, social networks},
- }
-
-```
-
-
 ## Authors
 
-* **Garam Lee** - *Initial work* - [LIFAD](https://github.com/goeastagent/LIFAD)
+* **Garam Lee** - *Initial work* - [MildInt](https://github.com/goeastagent/MildInt)
 
-See also the list of [contributors](https://github.com/goeastagent/LIFAD/contributors) who participated in this project.
-
-
-## Acknowledgments
+See also the list of [contributors](https://github.com/goeastagent/MildInt/contributors) who participated in this project.

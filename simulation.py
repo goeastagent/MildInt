@@ -328,21 +328,6 @@ def singlemodality_study():
         for t in range(1,11):
             s.append(singlemodality_function(activation,dissimilarity,k,t))
         print(s)
-        break
-    # for k in range(4):
-    #     data = pd.DataFrame()
-    #     for ts in range(1,10):
-    #         ts = 10
-    #         s = []
-    #         for dissimilarity in dissimilarities:
-    #             print('----------k:'+str(k) + ' ,ts:' + str(ts) + ' ,diss:' + str(dissimilarity) + '------')
-    #             print(singlemodality_function(activation,dissimilarity,k,ts))
-    #             s.append(singlemodality_function(activation,dissimilarity,k,ts))
-    #         print(s)
-    #     #     data = data.append(pd.DataFrame([s]))
-    #     # data.to_csv('modality_'+activation+str(k)+'.csv',sep=',')
-    #     exit(0)
-
 
 
 #singlemodality_study()
